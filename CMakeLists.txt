@@ -12,5 +12,7 @@ add_executable(CryptoVote
     src/Block.cpp
 )
 
+target_link_libraries(CryptoVote cryptopp)
+
 enable_testing()
 add_subdirectory(test)
