@@ -4,13 +4,14 @@
 #include <map>
 #include <chrono>
 
+#include "Block.h"
+
 // Forward declarations for classes
 class User;
 class Wallet;
 class VotingToken;
 class Vote;
 class Blockchain;
-class Block;
 class VotingSystem;
 class SecurityManager;
 
@@ -68,16 +69,6 @@ public:
 
     void addBlock(Block block);
     bool verifyChain();
-};
-
-// Block
-class Block
-{
-public:
-    std::string data;
-    std::string previousBlockHash;
-
-    std::string calculateHash();
 };
 
 // VotingSystem
