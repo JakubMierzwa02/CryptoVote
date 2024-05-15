@@ -10,6 +10,8 @@ add_executable(CryptoVote
     src/main.cpp
     src/Block.h
     src/Block.cpp
+    src/SecurityManager.h
+    src/SecurityManager.cpp
 )
 
 target_link_libraries(CryptoVote cryptopp)
