@@ -1,6 +1,7 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
+#include <iostream>
 #include <string>
 #include <sstream>
 #include <iomanip>
@@ -12,10 +13,10 @@ class Block
 public:
     std::string previousBlockHash;
     std::string data;
-    std::string blockHash;
-    long timestamp;
+    std::string hash;
+    std::time_t timestamp;
 
-    Block(std::string data, std::string previousBlockHash) : data(data), previousBlockHash(previousBlockHash) {}
+    Block(const std::string& data, const std::string& previousBlockHash);
     
     std::string calculateHash() const;
 };
