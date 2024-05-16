@@ -85,21 +85,43 @@ public:
 
 int main()
 {
-    SecurityManager& securityManager = SecurityManager::getInstance();
+    SecurityManager &securityManager = SecurityManager::getInstance();
 
     securityManager.generateKeys();
 
-    std::string key = securityManager.getEncryptionKey("defaultKey");
+    auto key = securityManager.getEncryptionKey("defaultKey");
 
-    std::string decodedKey;
-    CryptoPP::StringSource ss(key, true, new CryptoPP::HexDecoder(new CryptoPP::StringSink(decodedKey)));
+    // Debug:
+    std::cout << "Binary key length: " << key.size() << std::endl;
 
-    securityManager.addEncryptionKey("decodedKey", decodedKey);
+    std::cout << "Binary key: ";
+    for (const auto& c : key)
+        std::cout << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(c);
+    std::cout << std::endl;
 
-    // Encrypt some data
+    // Make sure the key length is correct
+    if (key.size() != CryptoPP::AES::DEFAULT_KEYLENGTH)
+    {
+        std::cerr << "Error: Invalid binary key length." << std::endl;
+        return 1;
+    }
+
+    securityManager.addEncryptionKey("defaultKey", key);
+
+    // Encrypt data
     std::string data = "Hello world!";
-    std::string encryptedData = securityManager.encrypt(data, "decodedKey");
-    std::cout << "Encrypted data: " << encryptedData << std::endl;
+    std::string encryptedData = securityManager.encrypt(data, "defaultKey");
+    std::cout << "Encrypted Data: ";
+    for (const auto& c : encryptedData)
+        std::cout << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(static_cast<unsigned char>(c));
+    std::cout << std::endl;
+
+    // Decrypt
+    std::string decryptedData = securityManager.decrypt(encryptedData, "defaultKey");
+    std::cout << "Decrypted Data: ";
+    for (const auto& c : decryptedData)
+        std::cout << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(static_cast<unsigned char>(c));
+    std::cout << std::endl;
 
     return 0;
 }
