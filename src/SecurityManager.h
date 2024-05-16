@@ -47,7 +47,11 @@ public:
 
     std::vector<unsigned char> getEncryptionKey(const std::string& keyName)
     {
-        return encryptionKeys[keyName];
+        auto it = encryptionKeys.find(keyName);
+        if (it != encryptionKeys.end())
+            return it->second;
+        else
+            throw std::runtime_error("Encryption key not found: " + keyName);
     }
 
     std::string getCertificate(const std::string& certName)

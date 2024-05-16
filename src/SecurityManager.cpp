@@ -11,22 +11,24 @@ std::string SecurityManager::encrypt(const std::string& plaintext, const std::st
     if (encryptionKeys.find(keyName) == encryptionKeys.end())
         throw std::invalid_argument("Key not found");
     
-    std::vector<unsigned char> key = encryptionKeys[keyName];
+    auto key = encryptionKeys[keyName];
 
     if (key.size() != CryptoPP::AES::DEFAULT_KEYLENGTH)
         throw std::runtime_error("Invalid key length.");
 
-    std::string iv(CryptoPP::AES::BLOCKSIZE, 0);
+    CryptoPP::SecByteBlock iv(CryptoPP::AES::BLOCKSIZE);
+    //std::string iv(CryptoPP::AES::BLOCKSIZE, 0);
 
     // Generate IV
     CryptoPP::AutoSeededRandomPool prng;
-    prng.GenerateBlock(reinterpret_cast<CryptoPP::byte*>(&iv[0]), iv.size());
+    //prng.GenerateBlock(reinterpret_cast<CryptoPP::byte*>(&iv[0]), iv.size());
+    prng.GenerateBlock(iv, iv.size());
 
     std::string ciphertext;
     try
     {
         CryptoPP::CBC_Mode<CryptoPP::AES>::Encryption encryption;
-        encryption.SetKeyWithIV(reinterpret_cast<const CryptoPP::byte*>(key.data()), key.size(), reinterpret_cast<const CryptoPP::byte*>(iv.data()));
+        encryption.SetKeyWithIV(key.data(), key.size(), iv);
 
         CryptoPP::StringSource(plaintext, true, new CryptoPP::StreamTransformationFilter(encryption, new CryptoPP::StringSink(ciphertext)));
 
@@ -36,8 +38,9 @@ std::string SecurityManager::encrypt(const std::string& plaintext, const std::st
         throw std::runtime_error(e.what());
     }
     
-    // Append IV to ciphertext for use in decryption
-    ciphertext = iv + ciphertext;
+    // Prepend IV to ciphertext for use in decryption
+    std::string ivStr(reinterpret_cast<const char*>(iv.data()), iv.size());
+    ciphertext += ivStr;
 
     // Encode ciphertext to Base64
     //std::string encodedCiphertext;
@@ -65,14 +68,16 @@ std::string SecurityManager::decrypt(const std::string& ciphertext, const std::s
     if (ciphertext.size() < CryptoPP::AES::BLOCKSIZE)
         throw std::runtime_error("Ciphertext too short");
 
-    std::string iv = ciphertext.substr(0, CryptoPP::AES::BLOCKSIZE);
+    std::string ivStr = ciphertext.substr(0, CryptoPP::AES::BLOCKSIZE);
     std::string enc = ciphertext.substr(CryptoPP::AES::BLOCKSIZE);
+
+    CryptoPP::SecByteBlock iv(reinterpret_cast<const CryptoPP::byte*>(ivStr.data()), CryptoPP::AES::BLOCKSIZE);
 
     std::string plaintext;
     try
     {
         CryptoPP::CBC_CTS_Mode<CryptoPP::AES>::Decryption decryption;
-        decryption.SetKeyWithIV(reinterpret_cast<const CryptoPP::byte*>(key.data()), key.size(), reinterpret_cast<const CryptoPP::byte*>(iv.data()));
+        decryption.SetKeyWithIV(key.data(), key.size(), iv);
 
         CryptoPP::StringSource(enc, true, new CryptoPP::StreamTransformationFilter(decryption, new CryptoPP::StringSink(plaintext)));
     }
@@ -90,7 +95,7 @@ void SecurityManager::generateKeys()
 
     CryptoPP::SecByteBlock key(CryptoPP::AES::DEFAULT_KEYLENGTH);
     prng.GenerateBlock(key, key.size());
-    
+
     std::vector<unsigned char> binaryKey(key.begin(), key.end());
 
     // Debug:

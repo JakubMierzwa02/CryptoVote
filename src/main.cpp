@@ -118,10 +118,7 @@ int main()
 
     // Decrypt
     std::string decryptedData = securityManager.decrypt(encryptedData, "defaultKey");
-    std::cout << "Decrypted Data: ";
-    for (const auto& c : decryptedData)
-        std::cout << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(static_cast<unsigned char>(c));
-    std::cout << std::endl;
+    std::cout << "Decrypted Data: " << decryptedData << std::endl;
 
     return 0;
 }
