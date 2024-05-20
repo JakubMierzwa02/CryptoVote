@@ -12,6 +12,8 @@ add_executable(CryptoVote
     src/Block.cpp
     src/Blockchain.h
     src/Blockchain.cpp
+    src/VotingToken.h
+    src/VotingToken.cpp
 )
 
 target_link_libraries(CryptoVote cryptopp)
