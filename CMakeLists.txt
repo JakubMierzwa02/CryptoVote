@@ -12,6 +12,8 @@ add_executable(CryptoVote
     src/Block.cpp
     src/Blockchain.h
     src/Blockchain.cpp
+    src/User.h
+    src/User.cpp
     src/Wallet.h
     src/Wallet.cpp
     src/VotingToken.h

@@ -6,34 +6,26 @@
 
 #include "Block.h"
 #include "Blockchain.h"
+#include "User.h"
 
 int main()
 {
-    try
+    User user(1, "Personal data");
+    user.registerUser();
+    if (user.login())
     {
-        Blockchain& blockchain = Blockchain::getInstance();
+        Wallet& wallet = user.getWallet();
+        wallet.generateWallet();
+        wallet.addTokens(100.0);
+        wallet.spendTokens(30.0);
 
-        Block block1("First Block Data", blockchain.getInstance().listOfBlocks.back().hash);
-        blockchain.addBlock(block1);
-
-        Block block2("Second Block Data", blockchain.getInstance().listOfBlocks.back().hash);
-        blockchain.addBlock(block2);
-
-        if (blockchain.verifyChain())
-            std::cout << "Blockchain is valid." << std::endl;
-        else
-            std::cout << "Blockchain is invalid." << std::endl;
-
-        for (const auto& block : blockchain.getInstance().listOfBlocks)
+        std::cout << "Wallet balance: " << wallet.getBalance() << std::endl;
+        for (const auto& transaction : wallet.getTransactionHistory())
         {
-            std::cout << "Block data: " << block.data << std::endl;
-            std::cout << "Block hash: " << block.hash << std::endl;
-            std::cout << "Previous block hash: " << block.previousBlockHash << std::endl;
+            std::cout << transaction << std::endl;
         }
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
+
+        user.logout();
     }
 
     return 0;
