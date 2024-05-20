@@ -5,6 +5,10 @@
 #include <string>
 #include <memory>
 
+#include "Block.h"
+#include "Blockchain.h"
+#include "VotingToken.h"
+
 class VotingToken;
 
 class Wallet

@@ -1,6 +1,4 @@
 #include "Wallet.h"
-#include "Block.h"
-#include "Blockchain.h"
 
 Wallet::Wallet()
     : accountBalance(0.0), votingToken(std::make_unique<VotingToken>())
