@@ -37,6 +37,12 @@ public:
 
     void addEncryptionKey(const std::string& keyName, const std::vector<unsigned char>& keyValue)
     {
+        if (keyValue.size() != CryptoPP::AES::DEFAULT_KEYLENGTH)
+        {
+            std::cerr << "Invalid key length: " << keyValue.size() << std::endl;
+            throw std::runtime_error("Invalid key length");
+        }
+        
         encryptionKeys[keyName] = keyValue;
     }
 

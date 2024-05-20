@@ -5,11 +5,13 @@ set(This CryptoVoteTest)
 add_subdirectory(googletest)
 
 add_executable(CryptoVoteTest
-    test.cpp
+    security_manager_test.cpp
+    ../src/SecurityManager.cpp
 )
 
 target_link_libraries(CryptoVoteTest
     gtest_main
+    cryptopp
 )
 
 enable_testing()

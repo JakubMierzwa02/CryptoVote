@@ -30,7 +30,9 @@ std::string SecurityManager::encrypt(const std::string& plaintext, const std::st
         CryptoPP::CBC_Mode<CryptoPP::AES>::Encryption encryption;
         encryption.SetKeyWithIV(key.data(), key.size(), iv);
 
-        CryptoPP::StringSource(plaintext, true, new CryptoPP::StreamTransformationFilter(encryption, new CryptoPP::StringSink(ciphertext)));
+        CryptoPP::StringSource(plaintext, true, 
+            new CryptoPP::StreamTransformationFilter(encryption, 
+            new CryptoPP::StringSink(ciphertext)));
 
     }
     catch(const std::exception& e)
@@ -79,11 +81,23 @@ std::string SecurityManager::decrypt(const std::string& ciphertext, const std::s
         CryptoPP::CBC_CTS_Mode<CryptoPP::AES>::Decryption decryption;
         decryption.SetKeyWithIV(key.data(), key.size(), iv);
 
-        CryptoPP::StringSource(enc, true, new CryptoPP::StreamTransformationFilter(decryption, new CryptoPP::StringSink(plaintext)));
+        CryptoPP::StringSource(enc, true, 
+            new CryptoPP::StreamTransformationFilter(decryption, 
+            new CryptoPP::StringSink(plaintext)));
     }
     catch(const std::exception& e)
     {
         throw std::runtime_error(e.what());
+    }
+
+    // Remove PKCS7 padding
+    if (!plaintext.empty())
+    {
+        size_t paddingLength = static_cast<size_t>(plaintext[plaintext.size() - 1]);
+        if (paddingLength > 0 && paddingLength <= CryptoPP::AES::BLOCKSIZE)
+        {
+            plaintext.erase(plaintext.size() - paddingLength);
+        }
     }
 
     return plaintext;
@@ -96,14 +110,7 @@ void SecurityManager::generateKeys()
     CryptoPP::SecByteBlock key(CryptoPP::AES::DEFAULT_KEYLENGTH);
     prng.GenerateBlock(key, key.size());
 
-    std::vector<unsigned char> binaryKey(key.begin(), key.end());
-
-    // Debug:
-    std::cout << "Generated Key Length: " << binaryKey.size() << std::endl;
-    std::cout << "Generated Key: ";
-    for (const auto &c : binaryKey)
-        std::cout << std::hex << std::setw(2) << std::setfill('0') << (int)c;
-    std::cout << std::endl;    
+    std::vector<unsigned char> binaryKey(key.begin(), key.end());   
 
     addEncryptionKey("defaultKey", binaryKey);
     addCertificate("defaultCert", "sampleCertificate");
