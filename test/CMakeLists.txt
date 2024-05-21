@@ -17,6 +17,8 @@ add_executable(CryptoVoteTest
     ../src/VotingToken.cpp
     ../src/Vote.cpp
     ../src/VoteFactory.cpp
+    # security_manager_test.cpp
+    ../src/SecurityManager.cpp
 )
 
 target_link_libraries(CryptoVoteTest

@@ -22,9 +22,12 @@ add_executable(CryptoVote
     src/Vote.cpp
     src/VoteFactory.h
     src/VoteFactory.cpp
+    src/SecurityManager.h
+    src/SecurityManager.cpp
 )
 
 target_link_libraries(CryptoVote cryptopp)
 
 enable_testing()
 add_subdirectory(test)
+add_subdirectory(src)

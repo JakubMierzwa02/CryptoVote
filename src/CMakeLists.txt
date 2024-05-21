@@ -1,0 +1,2 @@
+add_library(SecurityManager SecurityManager.cpp)
+target_link_libraries(SecurityManager cryptopp)
