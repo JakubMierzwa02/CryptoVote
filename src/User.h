@@ -24,6 +24,7 @@ public:
     void registerUser();
     bool login();
     void logout();
+    bool isLoggedIn() const;
     Wallet& getWallet();
 };
 

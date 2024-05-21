@@ -7,13 +7,18 @@ add_subdirectory(googletest)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_executable(CryptoVoteTest
-    test_blockchain.cpp
+    # test_blockchain.cpp
+    user_test.cpp
     ../src/Block.cpp
     ../src/Blockchain.cpp
+    ../src/User.cpp
+    ../src/Wallet.cpp
+    ../src/VotingToken.cpp
 )
 
 target_link_libraries(CryptoVoteTest
     gtest_main
+    cryptopp
 )
 
 target_link_libraries(CryptoVoteTest cryptopp)

@@ -50,6 +50,11 @@ void User::logout()
     }
 }
 
+bool User::isLoggedIn() const
+{
+    return loggedIn;
+}
+
 Wallet& User::getWallet()
 {
     return *wallet;

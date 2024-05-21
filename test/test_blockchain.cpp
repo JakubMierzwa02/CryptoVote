@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
 #include "../src/Block.h"
 #include "../src/Blockchain.h"
+#include "user_test.cpp"
 
 // Calculating hash
 TEST(BlockchainTest, CalculateHash)
