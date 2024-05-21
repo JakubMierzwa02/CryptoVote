@@ -24,6 +24,8 @@ add_executable(CryptoVote
     src/VoteFactory.cpp
     src/SecurityManager.h
     src/SecurityManager.cpp
+    src/VotingSystem.h
+    src/VotingSystem.cpp
 )
 
 target_link_libraries(CryptoVote cryptopp)

@@ -25,6 +25,7 @@ public:
     bool login();
     void logout();
     bool isLoggedIn() const;
+    int getUserID() const;
     Wallet& getWallet();
 };
 

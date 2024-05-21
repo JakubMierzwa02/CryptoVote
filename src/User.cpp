@@ -55,6 +55,11 @@ bool User::isLoggedIn() const
     return loggedIn;
 }
 
+int User::getUserID() const
+{
+    return userID;
+}
+
 Wallet& User::getWallet()
 {
     return *wallet;

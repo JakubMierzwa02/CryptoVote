@@ -11,39 +11,27 @@
 #include "VoteFactory.h"
 #include "VotingToken.h"
 #include "Wallet.h"
+#include "VotingSystem.h"
 
 int main()
 {
-    User user(1, "Personal Data");
-    user.registerUser();
+    VotingSystem votingSystem;
 
-    if (user.login())
-    {
-        Wallet& wallet = user.getWallet();
-        wallet.generateWallet();
-        wallet.addTokens(100.0);
-        wallet.spendTokens(30.0);
+    votingSystem.registerUser(1, "User One");
+    votingSystem.registerUser(2, "User Two");
 
-        std::cout << "Wallet balance: " << wallet.getBalance() << std::endl;
-        for (const auto& transaction : wallet.getTransactionHistory())
-        {
-            std::cout << transaction << std::endl;
-        }
+    votingSystem.startVoting();
 
-        auto token = VoteFactory::createVotingToken(10);
-        token->approve();
-        std::cout << "Voting token value: " << token->getValue() << ", valid: " << token->isValid() << std::endl;
+    votingSystem.castVote(1, "Candidate A");
+    votingSystem.castVote(2, "Candidate B");
 
-        auto vote = VoteFactory::createVote("Candidate A");
-        vote->castVote();
-        std::cout << "Vote choice: " << vote->getChoice() << std::endl;
+    votingSystem.endVoting();
 
-        Blockchain& blockchain = Blockchain::getInstance();
-        bool isChainValid = blockchain.verifyChain();
-        std::cout << "Blockchain valid: " << (isChainValid ? "true" : "false") << std::endl;
+    votingSystem.countVotes();
 
-        user.logout();
-    }
+    Blockchain& blockchain = Blockchain::getInstance();
+    bool isChainValid = blockchain.verifyChain();
+    std::cout << "Blockchain valid: " << (isChainValid ? "true" : "false") << std::endl;
 
     return 0;
 }
