@@ -8,12 +8,15 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_executable(CryptoVoteTest
     # test_blockchain.cpp
-    user_test.cpp
+    # user_test.cpp
+    vote_test.cpp
     ../src/Block.cpp
     ../src/Blockchain.cpp
     ../src/User.cpp
     ../src/Wallet.cpp
     ../src/VotingToken.cpp
+    ../src/Vote.cpp
+    ../src/VoteFactory.cpp
 )
 
 target_link_libraries(CryptoVoteTest
