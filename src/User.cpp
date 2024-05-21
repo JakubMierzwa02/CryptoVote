@@ -24,7 +24,7 @@ void User::registerUser()
 
 bool User::login()
 {
-    if (registeredUsers.find(userID) != registeredUsers.end())
+    if (registeredUsers.find(userID) != registeredUsers.end() && !loggedIn)
     {
         loggedIn = true;
         std::cout << "User logged in: " << userID << std::endl;

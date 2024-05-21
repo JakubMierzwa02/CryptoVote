@@ -1,7 +1,7 @@
 #include "Wallet.h"
 
 Wallet::Wallet()
-    : accountBalance(0.0), votingToken(std::make_unique<VotingToken>())
+    : accountBalance(0.0), votingToken(nullptr)
 {
 
 }
@@ -44,9 +44,10 @@ const VotingToken& Wallet::getVotingToken() const
     return *votingToken;
 }
 
-bool Wallet::useVotingToken()
+void Wallet::useVotingToken()
 {
-    votingToken->invalidate();
+    if (votingToken && votingToken->isValid())
+        votingToken->invalidate();
 }
 
 double Wallet::getBalance() const

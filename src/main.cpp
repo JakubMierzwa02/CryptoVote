@@ -22,16 +22,15 @@ int main()
 
     votingSystem.startVoting();
 
-    for (auto& user : votingSystem.getUsers())
+    for (const auto& user : votingSystem.getUsers())
     {
         auto& wallet = user->getWallet();
         wallet.generateWallet();
         auto token = VoteFactory::createVotingToken(1);
         wallet.addVotingToken(std::move(token));
     }
-    std::cout << "HEHE";
+
     votingSystem.castVote(1, "Candidate A");
-    std::cout << "HEHE";
     votingSystem.castVote(2, "Candidate B");
 
     votingSystem.castVote(1, "Candidate C");
