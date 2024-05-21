@@ -39,6 +39,16 @@ void Wallet::spendTokens(double amount)
     }
 }
 
+const VotingToken& Wallet::getVotingToken() const
+{
+    return *votingToken;
+}
+
+bool Wallet::useVotingToken()
+{
+    votingToken->invalidate();
+}
+
 double Wallet::getBalance() const
 {
     return accountBalance;
@@ -47,4 +57,9 @@ double Wallet::getBalance() const
 const std::vector<std::string>& Wallet::getTransactionHistory() const
 {
     return transactionHistory;
+}
+
+void Wallet::addVotingToken(std::unique_ptr<VotingToken> token)
+{
+    votingToken = std::move(token);
 }

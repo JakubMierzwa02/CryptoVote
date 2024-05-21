@@ -22,8 +22,11 @@ public:
     void generateWallet();
     void addTokens(double amount);
     void spendTokens(double amount);
+    const VotingToken& getVotingToken() const;
+    bool useVotingToken();
     double getBalance() const;
     const std::vector<std::string>& getTransactionHistory() const;
+    void addVotingToken(std::unique_ptr<VotingToken> token);
 };
 
 #endif

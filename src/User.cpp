@@ -64,3 +64,8 @@ Wallet& User::getWallet()
 {
     return *wallet;
 }
+
+bool User::hasValidVotingToken() const
+{
+    return wallet->getVotingToken().isValid();
+}

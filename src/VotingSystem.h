@@ -24,6 +24,7 @@ public:
     void startVoting();
     void endVoting();
     void countVotes();
+    const std::vector<std::shared_ptr<User>>& getUsers() const;
 
     void registerUser(int userID, const std::string& personalData);
     void castVote(int userID, const std::string& choice);

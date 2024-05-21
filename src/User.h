@@ -27,6 +27,7 @@ public:
     bool isLoggedIn() const;
     int getUserID() const;
     Wallet& getWallet();
+    bool hasValidVotingToken() const;
 };
 
 #endif
