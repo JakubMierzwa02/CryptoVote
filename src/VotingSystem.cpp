@@ -74,7 +74,11 @@ void VotingSystem::castVote(int userID, const std::string& choice)
         {
             if (userID == user->getUserID())
             {
-                if (user->hasValidVotingToken() && user->login())
+                if (!user->isLoggedIn() && user->login())
+                {
+                    std::cout << "User " << userID << " logged in to cast a vote." << std::endl;
+                }
+                if (user->hasValidVotingToken())
                 {
                     auto vote = VoteFactory::createVote(choice);
                     vote->castVote();

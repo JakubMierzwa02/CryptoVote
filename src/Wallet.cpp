@@ -41,7 +41,14 @@ void Wallet::spendTokens(double amount)
 
 const VotingToken& Wallet::getVotingToken() const
 {
-    return *votingToken;
+    if (votingToken)
+        return *votingToken;
+    else
+    {
+        static VotingToken invalidToken;
+        invalidToken.invalidate();
+        return invalidToken;
+    }
 }
 
 void Wallet::useVotingToken()
