@@ -36,10 +36,22 @@ void VotingSystem::countVotes()
     if (!votingStatus)
     {
         std::unordered_map<std::string, int> voteCount;
+        auto securityManager = SecurityManager::getInstance();
+
         for (const auto& entry : userVotes)
         {
-            const std::string& choice = entry.second;
-            voteCount[choice]++;
+            const std::string& encryptedChoice = entry.second;
+
+            try
+            {
+                std::string decryptedChoice = securityManager->decrypt(encryptedChoice, "defaultKey");
+                voteCount[decryptedChoice]++;
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << e.what() << '\n';
+            }
+            
         }
 
         std::cout << "Vote count: " << std::endl;
@@ -80,15 +92,18 @@ void VotingSystem::castVote(int userID, const std::string& choice)
                 }
                 if (user->hasValidVotingToken())
                 {
-                    auto vote = VoteFactory::createVote(choice);
+                    auto securityManager = SecurityManager::getInstance();
+                    std::string encryptedVote = securityManager->encrypt(choice, "defaultKey");
+
+                    auto vote = VoteFactory::createVote(encryptedVote);
                     vote->castVote();
-                    std::cout << "User: " << userID << " cast a vote for " << choice << std::endl;
+                    std::cout << "User: " << userID << " cast an encrypted vote at " << vote->getTimestamp() << std::endl;
 
                     // Add vote to the blockchain
-                    Block newBlock("Vote: " + choice, Blockchain::getInstance().listOfBlocks.back().hash);
+                    Block newBlock("Vote: " + encryptedVote, Blockchain::getInstance().listOfBlocks.back().hash);
                     Blockchain::getInstance().addBlock(newBlock);
 
-                    userVotes[userID] = choice;
+                    userVotes[userID] = encryptedVote;
 
                     // Use token
                     user->getWallet().useVotingToken();

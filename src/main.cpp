@@ -15,6 +15,9 @@
 
 int main()
 {
+    auto securityManager = SecurityManager::getInstance();
+    securityManager->generateKeys();
+    
     VotingSystem votingSystem;
 
     votingSystem.registerUser(1, "User One");

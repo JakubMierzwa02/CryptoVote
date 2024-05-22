@@ -11,9 +11,12 @@ User::User(int id, const std::string& data)
 
 void User::registerUser()
 {
+    auto securityManager = SecurityManager::getInstance();
+    std::string encryptedData = securityManager->encrypt(personalData, "defaultKey");
+
     if (registeredUsers.find(userID) == registeredUsers.end())
     {
-        registeredUsers[userID] = personalData;
+        registeredUsers[userID] = encryptedData;
         std::cout << "User registered with ID: " << userID << std::endl;
     }
     else
@@ -68,4 +71,10 @@ Wallet& User::getWallet()
 bool User::hasValidVotingToken() const
 {
     return wallet->getVotingToken().isValid();
+}
+
+std::string User::getPersonalData() const
+{
+    auto securityManager = SecurityManager::getInstance();
+    return securityManager->decrypt(registeredUsers.at(userID), "defaultKey");
 }

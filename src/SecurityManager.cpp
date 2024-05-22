@@ -17,11 +17,9 @@ std::string SecurityManager::encrypt(const std::string& plaintext, const std::st
         throw std::runtime_error("Invalid key length.");
 
     CryptoPP::SecByteBlock iv(CryptoPP::AES::BLOCKSIZE);
-    //std::string iv(CryptoPP::AES::BLOCKSIZE, 0);
 
     // Generate IV
     CryptoPP::AutoSeededRandomPool prng;
-    //prng.GenerateBlock(reinterpret_cast<CryptoPP::byte*>(&iv[0]), iv.size());
     prng.GenerateBlock(iv, iv.size());
 
     std::string ciphertext;

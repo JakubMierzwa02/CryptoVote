@@ -24,11 +24,11 @@ private:
     SecurityManager() {}
 
 public:
-    static SecurityManager& getInstance()
+    static SecurityManager* getInstance()
     {
         if (instance == nullptr)
-            instance.reset(new SecurityManager());
-        return *instance;
+            instance = std::unique_ptr<SecurityManager>(new SecurityManager());
+        return instance.get();
     }
 
     std::string encrypt(const std::string& plaintext, const std::string& keyName);

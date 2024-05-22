@@ -8,7 +8,7 @@ Vote::Vote(const std::string& choice)
 
 void Vote::castVote()
 {
-    std::cout << "Vote cast for: " << choice << " at " << std::ctime(&timestamp);
+    // std::cout << "Vote cast for: " << choice << " at " << std::ctime(&timestamp);
 }
 
 std::string Vote::getChoice() const

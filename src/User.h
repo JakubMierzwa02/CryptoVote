@@ -7,6 +7,7 @@
 #include <unordered_map>
 
 #include "Wallet.h"
+#include "SecurityManager.h"
 
 class Wallet;
 
@@ -28,6 +29,7 @@ public:
     int getUserID() const;
     Wallet& getWallet();
     bool hasValidVotingToken() const;
+    std::string getPersonalData() const;
 };
 
 #endif
