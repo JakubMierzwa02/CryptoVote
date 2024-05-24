@@ -99,7 +99,6 @@ void VotingSystem::castVote(int userID, const std::string& choice)
                     std::string encryptedVote = securityManager->encrypt(choice, "defaultKey");
 
                     auto vote = VoteFactory::createVote(encryptedVote);
-                    vote->castVote();
                     std::cout << "User: " << userID << " cast an encrypted vote at " << vote->getTimestamp() << std::endl;
 
                     // Add vote to the blockchain
