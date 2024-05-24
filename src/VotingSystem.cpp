@@ -100,6 +100,18 @@ const std::vector<std::shared_ptr<User>>& VotingSystem::getUsers() const
     return listOfUsers;
 }
 
+std::shared_ptr<User> VotingSystem::getUserByID(int userID)
+{
+    for (const auto& user : listOfUsers)
+    {
+        if (user->getUserID() == userID)
+        {
+            return user;
+        }
+    }
+    return nullptr;
+}
+
 /**
  * @brief Registers a user in the voting system
  * 

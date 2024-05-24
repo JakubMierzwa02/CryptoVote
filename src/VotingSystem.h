@@ -60,6 +60,8 @@ public:
     */
     const std::vector<std::shared_ptr<User>>& getUsers() const;
 
+    std::shared_ptr<User> getUserByID(int userID);
+
     /**
      * @brief Registers a user in the voting system
      * 
