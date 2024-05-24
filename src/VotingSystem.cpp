@@ -1,10 +1,23 @@
+/**
+ * @file VotingSystem.cpp
+ * @brief Implementation of the VotingSystem class
+*/
+
 #include "VotingSystem.h"
 
+/**
+ * @brief Constructor for the VotingSystem class
+ * 
+ * Initializes the voting system with default values
+*/
 VotingSystem::VotingSystem() : votingStatus(false)
 {
 
 }
 
+/**
+ * @brief Starts the voting process
+*/
 void VotingSystem::startVoting()
 {
     if (!votingStatus)
@@ -18,6 +31,9 @@ void VotingSystem::startVoting()
     }
 }
 
+/**
+ * @brief Ends the voting process
+*/
 void VotingSystem::endVoting()
 {
     if (votingStatus)
@@ -31,6 +47,11 @@ void VotingSystem::endVoting()
     }
 }
 
+/**
+ * @brief Counts the votes
+ * 
+ * @return The result of the vote count
+*/
 std::string VotingSystem::countVotes()
 {
     std::ostringstream result;
@@ -69,11 +90,22 @@ std::string VotingSystem::countVotes()
     return result.str();
 }
 
+/**
+ * @brief Gets the list of users in the voting system
+ * 
+ * @return The list of users
+*/
 const std::vector<std::shared_ptr<User>>& VotingSystem::getUsers() const
 {
     return listOfUsers;
 }
 
+/**
+ * @brief Registers a user in the voting system
+ * 
+ * @param userID The user ID
+ * @param personalData The personal data of the user
+*/
 void VotingSystem::registerUser(int userID, const std::string& personalData)
 {
     auto user = std::make_shared<User>(userID, personalData);
@@ -81,6 +113,12 @@ void VotingSystem::registerUser(int userID, const std::string& personalData)
     listOfUsers.push_back(user);
 }
 
+/**
+ * @brief Casts a vote for a user
+ * 
+ * @param userID The user ID
+ * @param choice The choice for the vote
+*/
 void VotingSystem::castVote(int userID, const std::string& choice)
 {
     if (votingStatus)

@@ -1,0 +1,95 @@
+\doxysection{Blockchain Class Reference}
+\hypertarget{classBlockchain}{}\label{classBlockchain}\index{Blockchain@{Blockchain}}
+
+
+Represents a blockchain.  
+
+
+
+
+{\ttfamily \#include $<$Blockchain.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBlockchain_a1304d426c090b308173aa8308c9cda25}{add\+Block}} (const \mbox{\hyperlink{classBlock}{Block}} \&block)
+\begin{DoxyCompactList}\small\item\em Adds a new block to the blockchain. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBlockchain_a66f232a4946df84c6b55920ec02ed933}{verify\+Chain}} () const
+\begin{DoxyCompactList}\small\item\em Verifies the integrity of the blockchain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classBlockchain}{Blockchain}} \& \mbox{\hyperlink{classBlockchain_ad20f63e2ec5892fe4d44b7803744847d}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the blockchain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classBlock}{Block}} $>$ \mbox{\hyperlink{classBlockchain_adc3eafd6c877a3efa8241756838b8a5c}{list\+Of\+Blocks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a blockchain. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBlockchain_a1304d426c090b308173aa8308c9cda25}\label{classBlockchain_a1304d426c090b308173aa8308c9cda25} 
+\index{Blockchain@{Blockchain}!addBlock@{addBlock}}
+\index{addBlock@{addBlock}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{addBlock()}{addBlock()}}
+{\footnotesize\ttfamily void Blockchain\+::add\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBlock}{Block}} \&}]{block }\end{DoxyParamCaption})}
+
+
+
+Adds a new block to the blockchain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & The block to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the previous block hash does not match \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classBlockchain_ad20f63e2ec5892fe4d44b7803744847d}\label{classBlockchain_ad20f63e2ec5892fe4d44b7803744847d} 
+\index{Blockchain@{Blockchain}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBlockchain}{Blockchain}} \& Blockchain\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of the blockchain. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance of the blockchain 
+\end{DoxyReturn}
+\Hypertarget{classBlockchain_a66f232a4946df84c6b55920ec02ed933}\label{classBlockchain_a66f232a4946df84c6b55920ec02ed933} 
+\index{Blockchain@{Blockchain}!verifyChain@{verifyChain}}
+\index{verifyChain@{verifyChain}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{verifyChain()}{verifyChain()}}
+{\footnotesize\ttfamily bool Blockchain\+::verify\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Verifies the integrity of the blockchain. 
+
+\begin{DoxyReturn}{Returns}
+True if the blockchain is valid, false otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBlockchain_adc3eafd6c877a3efa8241756838b8a5c}\label{classBlockchain_adc3eafd6c877a3efa8241756838b8a5c} 
+\index{Blockchain@{Blockchain}!listOfBlocks@{listOfBlocks}}
+\index{listOfBlocks@{listOfBlocks}!Blockchain@{Blockchain}}
+\doxysubsubsection{\texorpdfstring{listOfBlocks}{listOfBlocks}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classBlock}{Block}}$>$ Blockchain\+::list\+Of\+Blocks}
+
+The list of blocks in the blockchain 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Blockchain_8h}{Blockchain.\+h}}\item 
+src/\mbox{\hyperlink{Blockchain_8cpp}{Blockchain.\+cpp}}\end{DoxyCompactItemize}

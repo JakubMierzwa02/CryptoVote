@@ -1,0 +1,18 @@
+<map id="src/Vote.h" name="src/Vote.h">
+<area shape="rect" id="Node000001" title="Declaration of the Vote class." alt="" coords="162,5,249,31"/>
+<area shape="rect" id="Node000002" href="$Vote_8cpp.html" title="Implementation of the Vote class." alt="" coords="16,79,117,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,39,91,81,88,76,170,34"/>
+<area shape="rect" id="Node000003" href="$VoteFactory_8h.html" title="Declaration of the VoteFactory class." alt="" coords="192,79,323,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,40,251,77,247,80,220,43"/>
+<area shape="rect" id="Node000005" href="$VotingSystem_8h.html" title="Declaration of the VotingSystem class." alt="" coords="13,152,160,177"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="189,43,98,153,94,150,185,40"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="315,225,421,251"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="263,33,301,50,337,77,350,94,360,114,371,156,373,196,372,225,367,225,368,196,365,157,355,116,346,97,333,81,299,55,261,37"/>
+<area shape="rect" id="Node000004" href="$VoteFactory_8cpp.html" title="Implementation of the VoteFactory class." alt="" coords="184,152,331,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="260,118,260,152,255,152,255,118"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="218,112,116,154,114,149,216,107"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="295,109,322,127,345,150,356,169,363,190,370,225,364,226,358,191,351,172,341,154,318,131,292,113"/>
+<area shape="rect" id="Node000006" href="$VotingSystem_8cpp.html" title="Implementation of the VotingSystem class." alt="" coords="5,225,168,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="89,191,89,225,84,225,84,191"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="146,178,323,223,322,228,144,183"/>
+</map>

@@ -1,3 +1,8 @@
+/**
+ * @file SecurityManager.cpp
+ * @brief Implementation of the SecurityManager class
+*/
+
 #include "SecurityManager.h"
 #include <stdexcept>
 #include <iostream>
@@ -5,6 +10,15 @@
 
 std::unique_ptr<SecurityManager> SecurityManager::instance = nullptr;
 
+/**
+ * @brief Encrypts the given plaintext using the specified key
+ * 
+ * @param plaintext The plaintext to encrypt
+ * @param keyName The name of the encryption key
+ * @return The encrypted ciphertext
+ * @throw std::invalid_argument if the key is not found
+ * @throw std::runtime_error if there is an error during encryption
+*/
 std::string SecurityManager::encrypt(const std::string& plaintext, const std::string& keyName)
 {
     // Encryption logic
@@ -49,6 +63,15 @@ std::string SecurityManager::encrypt(const std::string& plaintext, const std::st
     return ciphertext;
 }
 
+/**
+ * @brief Decrypts the given ciphertext using the specified key
+ * 
+ * @param ciphertext The ciphertext to encrypt
+ * @param keyName The name of the encryption key
+ * @return The decrypted plaintext
+ * @throw std::invalid_argument if the key is not found
+ * @throw std::runtime_error if there is an error during decryption
+*/
 std::string SecurityManager::decrypt(const std::string& ciphertext, const std::string& keyName)
 {
     // Decryption logic
@@ -101,6 +124,9 @@ std::string SecurityManager::decrypt(const std::string& ciphertext, const std::s
     return plaintext;
 }
 
+/**
+ * @brief Generate encryption keys
+*/
 void SecurityManager::generateKeys()
 {
     CryptoPP::AutoSeededRandomPool prng;

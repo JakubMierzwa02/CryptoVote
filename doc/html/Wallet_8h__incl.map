@@ -1,0 +1,28 @@
+<map id="src/Wallet.h" name="src/Wallet.h">
+<area shape="rect" id="Node000001" title="Declaration of the Wallet class." alt="" coords="169,5,268,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="147,152,210,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,33,142,51,126,64,113,80,109,97,116,113,130,129,148,142,144,147,127,133,112,116,104,97,108,78,122,60,139,47,176,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,225,64,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,33,141,52,103,81,80,112,62,148,42,213,37,211,57,146,75,110,99,77,138,47,179,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="123,79,200,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,33,181,70,177,66,207,29"/>
+<area shape="rect" id="Node000005" href="$Block_8h.html" title="Declaration of the Block class." alt="" coords="275,152,346,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="270,27,311,45,330,59,345,77,350,94,348,111,332,142,328,139,343,110,345,94,340,80,326,63,308,50,267,32"/>
+<area shape="rect" id="Node000011" href="$Blockchain_8h.html" title="Declaration of the Blockchain class." alt="" coords="225,79,330,104"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="230,29,261,67,257,70,226,33"/>
+<area shape="rect" id="Node000012" href="$VotingToken_8h.html" title="Declaration of the VotingToken class." alt="" coords="405,79,517,104"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="258,28,410,72,408,77,257,33"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="276,177,78,228,76,223,275,172"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="571,225,651,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="347,172,558,221,557,227,346,177"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="88,225,163,251"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="282,180,169,223,167,218,280,175"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="187,225,261,251"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="298,179,250,219,247,214,295,175"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="286,225,405,251"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="319,176,336,212,331,214,314,179"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="429,225,547,251"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="340,175,448,218,446,223,338,180"/>
+<area shape="poly" id="edge13_Node000011_Node000002" title=" " alt="" coords="263,106,207,146,204,142,260,102"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="285,103,302,139,297,141,280,105"/>
+</map>

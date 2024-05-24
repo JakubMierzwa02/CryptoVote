@@ -1,0 +1,44 @@
+\doxysection{Voting\+System.\+h}
+\hypertarget{VotingSystem_8h_source}{}\label{VotingSystem_8h_source}\index{src/VotingSystem.h@{src/VotingSystem.h}}
+\mbox{\hyperlink{VotingSystem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ VOTINGSYSTEM\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ VOTINGSYSTEM\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{User_8h}{User.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vote_8h}{Vote.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Blockchain_8h}{Blockchain.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VoteFactory_8h}{VoteFactory.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVotingSystem}{VotingSystem}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<std::shared\_ptr<User>>\ listOfUsers;\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::unordered\_map<int,\ std::string>\ userVotes;\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ votingStatus;\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classVotingSystem_ab8f928f5da75818aef2de0a82e97c823}{VotingSystem}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVotingSystem_a1c98a9e7da5c73802a9ed14abdea868d}{startVoting}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVotingSystem_a76eccb778a8fbbc2bfcf089b9a6cd221}{endVoting}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::string\ \mbox{\hyperlink{classVotingSystem_a53698c68140dff992b8075b67827a78e}{countVotes}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<User>>\&\ \mbox{\hyperlink{classVotingSystem_a13d29a8c9d0ad169035893d8a4257233}{getUsers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVotingSystem_ac8f1c253f2c9d51454de195fd6d4562b}{registerUser}}(\textcolor{keywordtype}{int}\ userID,\ \textcolor{keyword}{const}\ std::string\&\ personalData);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVotingSystem_aa7e952a8b27a36ae35ea690349282830}{castVote}}(\textcolor{keywordtype}{int}\ userID,\ \textcolor{keyword}{const}\ std::string\&\ choice);}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

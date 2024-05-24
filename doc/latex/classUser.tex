@@ -1,0 +1,164 @@
+\doxysection{User Class Reference}
+\hypertarget{classUser}{}\label{classUser}\index{User@{User}}
+
+
+Represents a user in the voting system.  
+
+
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser_a22be4c46dd5287082e66d6d8abcc8630}{User}} (int id, const std\+::string \&data)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classUser}{User} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a8e6f6d2395c53b943261c0a509635dff}{register\+User}} ()
+\begin{DoxyCompactList}\small\item\em Registers the user by encrypting their personal data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUser_a84089fcfdcae6cd307bb3b4634e5d8f6}{login}} ()
+\begin{DoxyCompactList}\small\item\em Logs in the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ade7eb5acf5097892168086ceed504ab3}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Logs out the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUser_ab4eb2c07ea624fb4ce36cd9bab75c5e0}{is\+Logged\+In}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the user is logged in. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUser_afd5eaa855f85fc92ea51c0d1e0565d62}{get\+User\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Gets the user ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWallet}{Wallet}} \& \mbox{\hyperlink{classUser_aaef529fe65447ecbc18e768b01076ef0}{get\+Wallet}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s wallet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUser_a9436c3b4e593f030b7bba66123cc8736}{has\+Valid\+Voting\+Token}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the user has a valid voting token. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classUser_ad195ccd42cee8fcc93dd901297e677ba}{get\+Personal\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s personal data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user in the voting system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classUser_a22be4c46dd5287082e66d6d8abcc8630}\label{classUser_a22be4c46dd5287082e66d6d8abcc8630} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classUser}{User} class. 
+
+Initializes a user with a given ID and personal data
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The user ID \\
+\hline
+{\em data} & The personal data of the user \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classUser_ad195ccd42cee8fcc93dd901297e677ba}\label{classUser_ad195ccd42cee8fcc93dd901297e677ba} 
+\index{User@{User}!getPersonalData@{getPersonalData}}
+\index{getPersonalData@{getPersonalData}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getPersonalData()}{getPersonalData()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+Personal\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the user\textquotesingle{}s personal data. 
+
+\begin{DoxyReturn}{Returns}
+The decrypted personal data of the user 
+\end{DoxyReturn}
+\Hypertarget{classUser_afd5eaa855f85fc92ea51c0d1e0565d62}\label{classUser_afd5eaa855f85fc92ea51c0d1e0565d62} 
+\index{User@{User}!getUserID@{getUserID}}
+\index{getUserID@{getUserID}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserID()}{getUserID()}}
+{\footnotesize\ttfamily int User\+::get\+User\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the user ID. 
+
+\begin{DoxyReturn}{Returns}
+The user ID 
+\end{DoxyReturn}
+\Hypertarget{classUser_aaef529fe65447ecbc18e768b01076ef0}\label{classUser_aaef529fe65447ecbc18e768b01076ef0} 
+\index{User@{User}!getWallet@{getWallet}}
+\index{getWallet@{getWallet}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getWallet()}{getWallet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWallet}{Wallet}} \& User\+::get\+Wallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the user\textquotesingle{}s wallet. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the user\textquotesingle{}s wallet 
+\end{DoxyReturn}
+\Hypertarget{classUser_a9436c3b4e593f030b7bba66123cc8736}\label{classUser_a9436c3b4e593f030b7bba66123cc8736} 
+\index{User@{User}!hasValidVotingToken@{hasValidVotingToken}}
+\index{hasValidVotingToken@{hasValidVotingToken}!User@{User}}
+\doxysubsubsection{\texorpdfstring{hasValidVotingToken()}{hasValidVotingToken()}}
+{\footnotesize\ttfamily bool User\+::has\+Valid\+Voting\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the user has a valid voting token. 
+
+\begin{DoxyReturn}{Returns}
+True if the user has a valid voting token, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classUser_ab4eb2c07ea624fb4ce36cd9bab75c5e0}\label{classUser_ab4eb2c07ea624fb4ce36cd9bab75c5e0} 
+\index{User@{User}!isLoggedIn@{isLoggedIn}}
+\index{isLoggedIn@{isLoggedIn}!User@{User}}
+\doxysubsubsection{\texorpdfstring{isLoggedIn()}{isLoggedIn()}}
+{\footnotesize\ttfamily bool User\+::is\+Logged\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the user is logged in. 
+
+\begin{DoxyReturn}{Returns}
+True if the user is logged in, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classUser_a84089fcfdcae6cd307bb3b4634e5d8f6}\label{classUser_a84089fcfdcae6cd307bb3b4634e5d8f6} 
+\index{User@{User}!login@{login}}
+\index{login@{login}!User@{User}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily bool User\+::login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Logs in the user. 
+
+\begin{DoxyReturn}{Returns}
+True if login is successful, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classUser_ade7eb5acf5097892168086ceed504ab3}\label{classUser_ade7eb5acf5097892168086ceed504ab3} 
+\index{User@{User}!logout@{logout}}
+\index{logout@{logout}!User@{User}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily void User\+::logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Logs out the user. 
+
+\Hypertarget{classUser_a8e6f6d2395c53b943261c0a509635dff}\label{classUser_a8e6f6d2395c53b943261c0a509635dff} 
+\index{User@{User}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!User@{User}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily void User\+::register\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Registers the user by encrypting their personal data. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{User_8h}{User.\+h}}\item 
+src/\mbox{\hyperlink{User_8cpp}{User.\+cpp}}\end{DoxyCompactItemize}

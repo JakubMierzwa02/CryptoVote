@@ -1,0 +1,17 @@
+<map id="src/Wallet.h" name="src/Wallet.h">
+<area shape="rect" id="Node000001" title="Declaration of the Wallet class." alt="" coords="316,5,415,31"/>
+<area shape="rect" id="Node000002" href="$User_8h.html" title="Declaration of the User class." alt="" coords="201,79,287,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,40,265,81,263,76,332,35"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title=" " alt="" coords="286,225,391,251"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="365,45,343,225,337,225,360,45"/>
+<area shape="rect" id="Node000007" href="$Wallet_8cpp.html" title="Implementation of the Wallet class." alt="" coords="403,79,517,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="393,37,446,76,443,81,390,41"/>
+<area shape="rect" id="Node000003" href="$User_8cpp.html" title="Implementation of the User class." alt="" coords="5,152,107,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="202,111,88,154,86,149,200,106"/>
+<area shape="rect" id="Node000004" href="$VotingSystem_8h.html" title="Declaration of the VotingSystem class." alt="" coords="131,152,277,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="233,118,213,153,208,151,228,115"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="264,113,292,151,335,224,330,226,287,153,260,116"/>
+<area shape="rect" id="Node000005" href="$VotingSystem_8cpp.html" title="Implementation of the VotingSystem class." alt="" coords="99,225,261,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="198,191,186,226,181,224,193,189"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="239,181,318,223,315,227,236,186"/>
+</map>

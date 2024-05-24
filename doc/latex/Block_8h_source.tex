@@ -1,0 +1,30 @@
+\doxysection{Block.\+h}
+\hypertarget{Block_8h_source}{}\label{Block_8h_source}\index{src/Block.h@{src/Block.h}}
+\mbox{\hyperlink{Block_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ BLOCK\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ BLOCK\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <cryptopp/sha.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cryptopp/hex.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBlock}{Block}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{classBlock_ac951c3437130d8f760c3cc42c53ffab6}{previousBlockHash}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ \mbox{\hyperlink{classBlock_ad9bd291b5d440399d91da794cdc2bdb3}{data}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{classBlock_ad81167700ff115ff348eba6b22d97fb1}{hash}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::time\_t\ \mbox{\hyperlink{classBlock_aa1b5c3a62825dc0eb7ab15b9e00655f5}{timestamp}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classBlock}{Block}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classBlock_ad9bd291b5d440399d91da794cdc2bdb3}{data}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classBlock_ac951c3437130d8f760c3cc42c53ffab6}{previousBlockHash}});}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{classBlock_ade91387b033a59fa4d8685b4e5c5cb16}{calculateHash}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

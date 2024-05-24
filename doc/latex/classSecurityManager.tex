@@ -1,0 +1,202 @@
+\doxysection{Security\+Manager Class Reference}
+\hypertarget{classSecurityManager}{}\label{classSecurityManager}\index{SecurityManager@{SecurityManager}}
+
+
+Manages encryption and decryption operations.  
+
+
+
+
+{\ttfamily \#include $<$Security\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classSecurityManager_aa32f32c3d95425c78e4741aa9996f72f}{encrypt}} (const std\+::string \&plaintext, const std\+::string \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Encrypts the given plaintext using the specified key. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSecurityManager_a6a6a6c4a454d4b3a1d42e19dbb01a1f5}{decrypt}} (const std\+::string \&ciphertext, const std\+::string \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Decrypts the given ciphertext using the specified key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurityManager_a98043bbd45e5c99ad5d9a594d4e8f659}{generate\+Keys}} ()
+\begin{DoxyCompactList}\small\item\em Generate encryption keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurityManager_a380853d0bd3a3903015eab46eb8bb7e7}{add\+Encryption\+Key}} (const std\+::string \&key\+Name, const std\+::vector$<$ unsigned char $>$ \&key\+Value)
+\begin{DoxyCompactList}\small\item\em Adds an encryption key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSecurityManager_aa55a15a14b82dff9044dbf2d56fa6d23}{add\+Certificate}} (const std\+::string \&cert\+Name, const std\+::string \&cert\+Value)
+\begin{DoxyCompactList}\small\item\em Adds a certificate. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{classSecurityManager_a8d870dbf0678aab3b2fe2b03e3872cbc}{get\+Encryption\+Key}} (const std\+::string \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Gets an encryption key. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSecurityManager_a908d4d42ca870a6f16c4305e53952d75}{get\+Certificate}} (const std\+::string \&cert\+Name)
+\begin{DoxyCompactList}\small\item\em Gets a certificate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classSecurityManager}{Security\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSecurityManager_ae4f8df7d31733824b2fa3bdaead17e1f}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the \doxylink{classSecurityManager}{Security\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages encryption and decryption operations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSecurityManager_aa55a15a14b82dff9044dbf2d56fa6d23}\label{classSecurityManager_aa55a15a14b82dff9044dbf2d56fa6d23} 
+\index{SecurityManager@{SecurityManager}!addCertificate@{addCertificate}}
+\index{addCertificate@{addCertificate}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{addCertificate()}{addCertificate()}}
+{\footnotesize\ttfamily void Security\+Manager\+::add\+Certificate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cert\+Name,  }\item[{const std\+::string \&}]{cert\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the certificate \\
+\hline
+{\em cert\+Value} & The value of the certifiate \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSecurityManager_a380853d0bd3a3903015eab46eb8bb7e7}\label{classSecurityManager_a380853d0bd3a3903015eab46eb8bb7e7} 
+\index{SecurityManager@{SecurityManager}!addEncryptionKey@{addEncryptionKey}}
+\index{addEncryptionKey@{addEncryptionKey}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{addEncryptionKey()}{addEncryptionKey()}}
+{\footnotesize\ttfamily void Security\+Manager\+::add\+Encryption\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key\+Name,  }\item[{const std\+::vector$<$ unsigned char $>$ \&}]{key\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an encryption key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key \\
+\hline
+{\em key\+Value} & The value of the key \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the key length is invalid \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classSecurityManager_a6a6a6c4a454d4b3a1d42e19dbb01a1f5}\label{classSecurityManager_a6a6a6c4a454d4b3a1d42e19dbb01a1f5} 
+\index{SecurityManager@{SecurityManager}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::string Security\+Manager\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ciphertext,  }\item[{const std\+::string \&}]{key\+Name }\end{DoxyParamCaption})}
+
+
+
+Decrypts the given ciphertext using the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & The ciphertext to encrypt \\
+\hline
+{\em key\+Name} & The name of the encryption key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted plaintext 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the key is not found \\
+\hline
+{\em std\+::runtime\+\_\+error} & if there is an error during decryption \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classSecurityManager_aa32f32c3d95425c78e4741aa9996f72f}\label{classSecurityManager_aa32f32c3d95425c78e4741aa9996f72f} 
+\index{SecurityManager@{SecurityManager}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::string Security\+Manager\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plaintext,  }\item[{const std\+::string \&}]{key\+Name }\end{DoxyParamCaption})}
+
+
+
+Encrypts the given plaintext using the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & The plaintext to encrypt \\
+\hline
+{\em key\+Name} & The name of the encryption key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encrypted ciphertext 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the key is not found \\
+\hline
+{\em std\+::runtime\+\_\+error} & if there is an error during encryption \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classSecurityManager_a98043bbd45e5c99ad5d9a594d4e8f659}\label{classSecurityManager_a98043bbd45e5c99ad5d9a594d4e8f659} 
+\index{SecurityManager@{SecurityManager}!generateKeys@{generateKeys}}
+\index{generateKeys@{generateKeys}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{generateKeys()}{generateKeys()}}
+{\footnotesize\ttfamily void Security\+Manager\+::generate\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generate encryption keys. 
+
+\Hypertarget{classSecurityManager_a908d4d42ca870a6f16c4305e53952d75}\label{classSecurityManager_a908d4d42ca870a6f16c4305e53952d75} 
+\index{SecurityManager@{SecurityManager}!getCertificate@{getCertificate}}
+\index{getCertificate@{getCertificate}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{getCertificate()}{getCertificate()}}
+{\footnotesize\ttfamily std\+::string Security\+Manager\+::get\+Certificate (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cert\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the certificate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The certificate 
+\end{DoxyReturn}
+\Hypertarget{classSecurityManager_a8d870dbf0678aab3b2fe2b03e3872cbc}\label{classSecurityManager_a8d870dbf0678aab3b2fe2b03e3872cbc} 
+\index{SecurityManager@{SecurityManager}!getEncryptionKey@{getEncryptionKey}}
+\index{getEncryptionKey@{getEncryptionKey}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{getEncryptionKey()}{getEncryptionKey()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned char $>$ Security\+Manager\+::get\+Encryption\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an encryption key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encryption key 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the key is not found \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classSecurityManager_ae4f8df7d31733824b2fa3bdaead17e1f}\label{classSecurityManager_ae4f8df7d31733824b2fa3bdaead17e1f} 
+\index{SecurityManager@{SecurityManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!SecurityManager@{SecurityManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classSecurityManager}{Security\+Manager}} \texorpdfstring{$\ast$}{*} Security\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the singleton instance of the \doxylink{classSecurityManager}{Security\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the singleton instance of the \doxylink{classSecurityManager}{Security\+Manager} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{SecurityManager_8h}{Security\+Manager.\+h}}\item 
+src/\mbox{\hyperlink{SecurityManager_8cpp}{Security\+Manager.\+cpp}}\end{DoxyCompactItemize}

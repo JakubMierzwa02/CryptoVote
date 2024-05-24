@@ -1,0 +1,66 @@
+\doxysection{Vote\+Factory Class Reference}
+\hypertarget{classVoteFactory}{}\label{classVoteFactory}\index{VoteFactory@{VoteFactory}}
+
+
+Factory class for creating \doxylink{classVote}{Vote} and \doxylink{classVotingToken}{Voting\+Token} objects.  
+
+
+
+
+{\ttfamily \#include $<$Vote\+Factory.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classVote}{Vote}} $>$ \mbox{\hyperlink{classVoteFactory_a53468191b40bd1cacfe39d9ba1e7b5ad}{create\+Vote}} (const std\+::string \&choice)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classVote}{Vote} object. \end{DoxyCompactList}\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classVotingToken}{Voting\+Token}} $>$ \mbox{\hyperlink{classVoteFactory_a2de559d2a57bc54011f836236404d645}{create\+Voting\+Token}} (int value)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{classVotingToken}{Voting\+Token} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating \doxylink{classVote}{Vote} and \doxylink{classVotingToken}{Voting\+Token} objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVoteFactory_a53468191b40bd1cacfe39d9ba1e7b5ad}\label{classVoteFactory_a53468191b40bd1cacfe39d9ba1e7b5ad} 
+\index{VoteFactory@{VoteFactory}!createVote@{createVote}}
+\index{createVote@{createVote}!VoteFactory@{VoteFactory}}
+\doxysubsubsection{\texorpdfstring{createVote()}{createVote()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classVote}{Vote}} $>$ Vote\+Factory\+::create\+Vote (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a new \doxylink{classVote}{Vote} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & The choice for the vote \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique pointer to the created \doxylink{classVote}{Vote} object 
+\end{DoxyReturn}
+\Hypertarget{classVoteFactory_a2de559d2a57bc54011f836236404d645}\label{classVoteFactory_a2de559d2a57bc54011f836236404d645} 
+\index{VoteFactory@{VoteFactory}!createVotingToken@{createVotingToken}}
+\index{createVotingToken@{createVotingToken}!VoteFactory@{VoteFactory}}
+\doxysubsubsection{\texorpdfstring{createVotingToken()}{createVotingToken()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classVotingToken}{Voting\+Token}} $>$ Vote\+Factory\+::create\+Voting\+Token (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a new \doxylink{classVotingToken}{Voting\+Token} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value for the voting token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A unique pointer to the created \doxylink{classVotingToken}{Voting\+Token} object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{VoteFactory_8h}{Vote\+Factory.\+h}}\item 
+src/\mbox{\hyperlink{VoteFactory_8cpp}{Vote\+Factory.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\doxysection{Block Class Reference}
+\hypertarget{classBlock}{}\label{classBlock}\index{Block@{Block}}
+
+
+Represents a block in the blockchain.  
+
+
+
+
+{\ttfamily \#include $<$Block.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBlock_af116ad9447d12758a182f81fbe30ab46}{Block}} (const std\+::string \&\mbox{\hyperlink{classBlock_ad9bd291b5d440399d91da794cdc2bdb3}{data}}, const std\+::string \&\mbox{\hyperlink{classBlock_ac951c3437130d8f760c3cc42c53ffab6}{previous\+Block\+Hash}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classBlock}{Block} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBlock_ade91387b033a59fa4d8685b4e5c5cb16}{calculate\+Hash}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the hash of the block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classBlock_ac951c3437130d8f760c3cc42c53ffab6}{previous\+Block\+Hash}}
+\item 
+std\+::string \mbox{\hyperlink{classBlock_ad9bd291b5d440399d91da794cdc2bdb3}{data}}
+\item 
+std\+::string \mbox{\hyperlink{classBlock_ad81167700ff115ff348eba6b22d97fb1}{hash}}
+\item 
+std\+::time\+\_\+t \mbox{\hyperlink{classBlock_aa1b5c3a62825dc0eb7ab15b9e00655f5}{timestamp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a block in the blockchain. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBlock_af116ad9447d12758a182f81fbe30ab46}\label{classBlock_af116ad9447d12758a182f81fbe30ab46} 
+\index{Block@{Block}!Block@{Block}}
+\index{Block@{Block}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data,  }\item[{const std\+::string \&}]{previous\+Block\+Hash }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classBlock}{Block} class. 
+
+Creates a new block with given data and the hash of the previous block
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to store in the block \\
+\hline
+{\em previous\+Block\+Hash} & The hash of the previous block \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBlock_ade91387b033a59fa4d8685b4e5c5cb16}\label{classBlock_ade91387b033a59fa4d8685b4e5c5cb16} 
+\index{Block@{Block}!calculateHash@{calculateHash}}
+\index{calculateHash@{calculateHash}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{calculateHash()}{calculateHash()}}
+{\footnotesize\ttfamily std\+::string Block\+::calculate\+Hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the hash of the block. 
+
+Uses the SHA-\/256 algorithm to calculate the hash from the block\textquotesingle{}s data
+
+\begin{DoxyReturn}{Returns}
+The hash of the block 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classBlock_ad9bd291b5d440399d91da794cdc2bdb3}\label{classBlock_ad9bd291b5d440399d91da794cdc2bdb3} 
+\index{Block@{Block}!data@{data}}
+\index{data@{data}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily std\+::string Block\+::data}
+
+The data stored in the block \Hypertarget{classBlock_ad81167700ff115ff348eba6b22d97fb1}\label{classBlock_ad81167700ff115ff348eba6b22d97fb1} 
+\index{Block@{Block}!hash@{hash}}
+\index{hash@{hash}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily std\+::string Block\+::hash}
+
+The hash of the current block \Hypertarget{classBlock_ac951c3437130d8f760c3cc42c53ffab6}\label{classBlock_ac951c3437130d8f760c3cc42c53ffab6} 
+\index{Block@{Block}!previousBlockHash@{previousBlockHash}}
+\index{previousBlockHash@{previousBlockHash}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{previousBlockHash}{previousBlockHash}}
+{\footnotesize\ttfamily std\+::string Block\+::previous\+Block\+Hash}
+
+The hash of the previous block \Hypertarget{classBlock_aa1b5c3a62825dc0eb7ab15b9e00655f5}\label{classBlock_aa1b5c3a62825dc0eb7ab15b9e00655f5} 
+\index{Block@{Block}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily std\+::time\+\_\+t Block\+::timestamp}
+
+The timestamp of when the block was created 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Block_8h}{Block.\+h}}\item 
+src/\mbox{\hyperlink{Block_8cpp}{Block.\+cpp}}\end{DoxyCompactItemize}

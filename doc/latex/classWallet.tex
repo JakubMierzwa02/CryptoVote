@@ -1,0 +1,161 @@
+\doxysection{Wallet Class Reference}
+\hypertarget{classWallet}{}\label{classWallet}\index{Wallet@{Wallet}}
+
+
+Represents a user\textquotesingle{}s wallet in the voting system.  
+
+
+
+
+{\ttfamily \#include $<$Wallet.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWallet_ad9be9e49244b78db9099fcaeccd1af04}{Wallet}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classWallet}{Wallet} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWallet_a08ed7535c594e97a9c26323355d67f45}{generate\+Wallet}} ()
+\begin{DoxyCompactList}\small\item\em Generates a new wallet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWallet_a9045bf2588e34c2592b13d34042e0222}{add\+Tokens}} (double amount)
+\begin{DoxyCompactList}\small\item\em Adds tokens to the wallet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWallet_aae6a0aaa3d24353adb204376a78f4086}{spend\+Tokens}} (double amount)
+\begin{DoxyCompactList}\small\item\em Spends tokens from the wallet. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classVotingToken}{Voting\+Token}} \& \mbox{\hyperlink{classWallet_a493d2fd27e5828165e016be3053f94d3}{get\+Voting\+Token}} () const
+\begin{DoxyCompactList}\small\item\em Gets the voting token from the wallet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWallet_aa72858290ab4fb35c357139ec1fcd9e3}{use\+Voting\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Uses the voting token (make it invalid) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWallet_ae70fc806cf13164bbe28e79c2ce0d181}{get\+Balance}} () const
+\begin{DoxyCompactList}\small\item\em Gets the account balance of the wallet. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classWallet_a97fc8bcebca1dc70aba2bba947b5e745}{get\+Transaction\+History}} () const
+\begin{DoxyCompactList}\small\item\em Gets the transaction history of the wallet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWallet_ab93aca099f2e72131becad62212cf8cd}{add\+Voting\+Token}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classVotingToken}{Voting\+Token}} $>$ token)
+\begin{DoxyCompactList}\small\item\em Adds a voting token to the wallet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user\textquotesingle{}s wallet in the voting system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWallet_ad9be9e49244b78db9099fcaeccd1af04}\label{classWallet_ad9be9e49244b78db9099fcaeccd1af04} 
+\index{Wallet@{Wallet}!Wallet@{Wallet}}
+\index{Wallet@{Wallet}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{Wallet()}{Wallet()}}
+{\footnotesize\ttfamily Wallet\+::\+Wallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classWallet}{Wallet} class. 
+
+Initializes the wallet with default values 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWallet_a9045bf2588e34c2592b13d34042e0222}\label{classWallet_a9045bf2588e34c2592b13d34042e0222} 
+\index{Wallet@{Wallet}!addTokens@{addTokens}}
+\index{addTokens@{addTokens}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{addTokens()}{addTokens()}}
+{\footnotesize\ttfamily void Wallet\+::add\+Tokens (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})}
+
+
+
+Adds tokens to the wallet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount of tokens to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWallet_ab93aca099f2e72131becad62212cf8cd}\label{classWallet_ab93aca099f2e72131becad62212cf8cd} 
+\index{Wallet@{Wallet}!addVotingToken@{addVotingToken}}
+\index{addVotingToken@{addVotingToken}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{addVotingToken()}{addVotingToken()}}
+{\footnotesize\ttfamily void Wallet\+::add\+Voting\+Token (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classVotingToken}{Voting\+Token}} $>$}]{token }\end{DoxyParamCaption})}
+
+
+
+Adds a voting token to the wallet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The voting token to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWallet_a08ed7535c594e97a9c26323355d67f45}\label{classWallet_a08ed7535c594e97a9c26323355d67f45} 
+\index{Wallet@{Wallet}!generateWallet@{generateWallet}}
+\index{generateWallet@{generateWallet}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{generateWallet()}{generateWallet()}}
+{\footnotesize\ttfamily void Wallet\+::generate\+Wallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a new wallet. 
+
+Placeholder for wallet generation logic \Hypertarget{classWallet_ae70fc806cf13164bbe28e79c2ce0d181}\label{classWallet_ae70fc806cf13164bbe28e79c2ce0d181} 
+\index{Wallet@{Wallet}!getBalance@{getBalance}}
+\index{getBalance@{getBalance}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{getBalance()}{getBalance()}}
+{\footnotesize\ttfamily double Wallet\+::get\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the account balance of the wallet. 
+
+\begin{DoxyReturn}{Returns}
+The account balance 
+\end{DoxyReturn}
+\Hypertarget{classWallet_a97fc8bcebca1dc70aba2bba947b5e745}\label{classWallet_a97fc8bcebca1dc70aba2bba947b5e745} 
+\index{Wallet@{Wallet}!getTransactionHistory@{getTransactionHistory}}
+\index{getTransactionHistory@{getTransactionHistory}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{getTransactionHistory()}{getTransactionHistory()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Wallet\+::get\+Transaction\+History (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the transaction history of the wallet. 
+
+\begin{DoxyReturn}{Returns}
+The transaction history 
+\end{DoxyReturn}
+\Hypertarget{classWallet_a493d2fd27e5828165e016be3053f94d3}\label{classWallet_a493d2fd27e5828165e016be3053f94d3} 
+\index{Wallet@{Wallet}!getVotingToken@{getVotingToken}}
+\index{getVotingToken@{getVotingToken}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{getVotingToken()}{getVotingToken()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classVotingToken}{Voting\+Token}} \& Wallet\+::get\+Voting\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the voting token from the wallet. 
+
+\begin{DoxyReturn}{Returns}
+The voting token 
+\end{DoxyReturn}
+\Hypertarget{classWallet_aae6a0aaa3d24353adb204376a78f4086}\label{classWallet_aae6a0aaa3d24353adb204376a78f4086} 
+\index{Wallet@{Wallet}!spendTokens@{spendTokens}}
+\index{spendTokens@{spendTokens}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{spendTokens()}{spendTokens()}}
+{\footnotesize\ttfamily void Wallet\+::spend\+Tokens (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})}
+
+
+
+Spends tokens from the wallet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount of tokens to spend \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classWallet_aa72858290ab4fb35c357139ec1fcd9e3}\label{classWallet_aa72858290ab4fb35c357139ec1fcd9e3} 
+\index{Wallet@{Wallet}!useVotingToken@{useVotingToken}}
+\index{useVotingToken@{useVotingToken}!Wallet@{Wallet}}
+\doxysubsubsection{\texorpdfstring{useVotingToken()}{useVotingToken()}}
+{\footnotesize\ttfamily void Wallet\+::use\+Voting\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uses the voting token (make it invalid) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Wallet_8h}{Wallet.\+h}}\item 
+src/\mbox{\hyperlink{Wallet_8cpp}{Wallet.\+cpp}}\end{DoxyCompactItemize}

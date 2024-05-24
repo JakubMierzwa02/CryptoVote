@@ -1,0 +1,30 @@
+\doxysection{Blockchain.\+h}
+\hypertarget{Blockchain_8h_source}{}\label{Blockchain_8h_source}\index{src/Blockchain.h@{src/Blockchain.h}}
+\mbox{\hyperlink{Blockchain_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ BLOCKCHAIN\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ BLOCKCHAIN\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Block_8h}{Block.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBlockchain}{Blockchain}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classBlockchain}{Blockchain}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classBlock}{Block}}\ createGenesisBlock()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<Block>\ \mbox{\hyperlink{classBlockchain_adc3eafd6c877a3efa8241756838b8a5c}{listOfBlocks}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classBlockchain}{Blockchain}}\&\ \mbox{\hyperlink{classBlockchain_ad20f63e2ec5892fe4d44b7803744847d}{getInstance}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBlockchain_a1304d426c090b308173aa8308c9cda25}{addBlock}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classBlock}{Block}}\&\ block);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBlockchain_a66f232a4946df84c6b55920ec02ed933}{verifyChain}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

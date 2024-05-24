@@ -1,0 +1,23 @@
+<map id="src/Blockchain.h" name="src/Blockchain.h">
+<area shape="rect" id="Node000001" title="Declaration of the Blockchain class." alt="" coords="195,5,323,31"/>
+<area shape="rect" id="Node000002" href="$Blockchain_8cpp.html" title="Implementation of the Blockchain class." alt="" coords="5,79,148,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,38,108,81,106,76,216,33"/>
+<area shape="rect" id="Node000003" href="$VotingSystem_8h.html" title="Declaration of the VotingSystem class." alt="" coords="119,225,266,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,44,214,153,197,226,192,224,209,151,247,42"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="363,299,468,324"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="321,32,366,49,412,74,455,107,472,128,486,151,491,170,492,195,489,224,480,252,460,280,435,300,432,296,456,276,476,249,484,223,487,195,486,170,481,153,468,131,451,111,410,78,363,54,319,37"/>
+<area shape="rect" id="Node000006" href="$Wallet_8h.html" title="Declaration of the Wallet class." alt="" coords="283,79,382,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="283,38,323,77,319,80,279,42"/>
+<area shape="rect" id="Node000004" href="$VotingSystem_8cpp.html" title="Implementation of the VotingSystem class." alt="" coords="111,299,274,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="195,264,195,299,190,299,190,264"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="242,252,380,296,378,301,240,257"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="396,104,433,121,450,134,463,151,471,170,474,192,465,234,446,272,427,300,422,297,441,269,460,232,468,191,466,172,458,153,446,138,430,126,394,108"/>
+<area shape="rect" id="Node000007" href="$User_8h.html" title="Declaration of the User class." alt="" coords="224,152,311,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="315,116,280,154,276,150,311,113"/>
+<area shape="rect" id="Node000009" href="$Wallet_8cpp.html" title="Implementation of the Wallet class." alt="" coords="335,152,448,177"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="353,113,384,150,380,154,349,116"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="247,189,207,227,203,223,244,185"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="283,188,304,218,331,249,364,276,396,296,393,301,361,280,327,253,300,221,279,191"/>
+<area shape="rect" id="Node000008" href="$User_8cpp.html" title="Implementation of the User class." alt="" coords="341,225,442,251"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="300,182,372,223,370,227,298,186"/>
+</map>

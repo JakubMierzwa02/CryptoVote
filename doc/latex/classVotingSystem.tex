@@ -1,0 +1,133 @@
+\doxysection{Voting\+System Class Reference}
+\hypertarget{classVotingSystem}{}\label{classVotingSystem}\index{VotingSystem@{VotingSystem}}
+
+
+Manages the voting process, including user registration and vote casting.  
+
+
+
+
+{\ttfamily \#include $<$Voting\+System.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVotingSystem_ab8f928f5da75818aef2de0a82e97c823}{Voting\+System}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classVotingSystem}{Voting\+System} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVotingSystem_a1c98a9e7da5c73802a9ed14abdea868d}{start\+Voting}} ()
+\begin{DoxyCompactList}\small\item\em Starts the voting process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVotingSystem_a76eccb778a8fbbc2bfcf089b9a6cd221}{end\+Voting}} ()
+\begin{DoxyCompactList}\small\item\em Ends the voting process. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classVotingSystem_a53698c68140dff992b8075b67827a78e}{count\+Votes}} ()
+\begin{DoxyCompactList}\small\item\em Counts the votes. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classUser}{User}} $>$ $>$ \& \mbox{\hyperlink{classVotingSystem_a13d29a8c9d0ad169035893d8a4257233}{get\+Users}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of users in the voting system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVotingSystem_ac8f1c253f2c9d51454de195fd6d4562b}{register\+User}} (int user\+ID, const std\+::string \&personal\+Data)
+\begin{DoxyCompactList}\small\item\em Registers a user in the voting system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVotingSystem_aa7e952a8b27a36ae35ea690349282830}{cast\+Vote}} (int user\+ID, const std\+::string \&choice)
+\begin{DoxyCompactList}\small\item\em Casts a vote for a user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the voting process, including user registration and vote casting. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVotingSystem_ab8f928f5da75818aef2de0a82e97c823}\label{classVotingSystem_ab8f928f5da75818aef2de0a82e97c823} 
+\index{VotingSystem@{VotingSystem}!VotingSystem@{VotingSystem}}
+\index{VotingSystem@{VotingSystem}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{VotingSystem()}{VotingSystem()}}
+{\footnotesize\ttfamily Voting\+System\+::\+Voting\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classVotingSystem}{Voting\+System} class. 
+
+Initializes the voting system with default values 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVotingSystem_aa7e952a8b27a36ae35ea690349282830}\label{classVotingSystem_aa7e952a8b27a36ae35ea690349282830} 
+\index{VotingSystem@{VotingSystem}!castVote@{castVote}}
+\index{castVote@{castVote}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{castVote()}{castVote()}}
+{\footnotesize\ttfamily void Voting\+System\+::cast\+Vote (\begin{DoxyParamCaption}\item[{int}]{user\+ID,  }\item[{const std\+::string \&}]{choice }\end{DoxyParamCaption})}
+
+
+
+Casts a vote for a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+ID} & The user ID \\
+\hline
+{\em choice} & The choice for the vote \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVotingSystem_a53698c68140dff992b8075b67827a78e}\label{classVotingSystem_a53698c68140dff992b8075b67827a78e} 
+\index{VotingSystem@{VotingSystem}!countVotes@{countVotes}}
+\index{countVotes@{countVotes}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{countVotes()}{countVotes()}}
+{\footnotesize\ttfamily std\+::string Voting\+System\+::count\+Votes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Counts the votes. 
+
+\begin{DoxyReturn}{Returns}
+The result of the vote count 
+\end{DoxyReturn}
+\Hypertarget{classVotingSystem_a76eccb778a8fbbc2bfcf089b9a6cd221}\label{classVotingSystem_a76eccb778a8fbbc2bfcf089b9a6cd221} 
+\index{VotingSystem@{VotingSystem}!endVoting@{endVoting}}
+\index{endVoting@{endVoting}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{endVoting()}{endVoting()}}
+{\footnotesize\ttfamily void Voting\+System\+::end\+Voting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ends the voting process. 
+
+\Hypertarget{classVotingSystem_a13d29a8c9d0ad169035893d8a4257233}\label{classVotingSystem_a13d29a8c9d0ad169035893d8a4257233} 
+\index{VotingSystem@{VotingSystem}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classUser}{User}} $>$ $>$ \& Voting\+System\+::get\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of users in the voting system. 
+
+\begin{DoxyReturn}{Returns}
+The list of users 
+\end{DoxyReturn}
+\Hypertarget{classVotingSystem_ac8f1c253f2c9d51454de195fd6d4562b}\label{classVotingSystem_ac8f1c253f2c9d51454de195fd6d4562b} 
+\index{VotingSystem@{VotingSystem}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily void Voting\+System\+::register\+User (\begin{DoxyParamCaption}\item[{int}]{user\+ID,  }\item[{const std\+::string \&}]{personal\+Data }\end{DoxyParamCaption})}
+
+
+
+Registers a user in the voting system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+ID} & The user ID \\
+\hline
+{\em personal\+Data} & The personal data of the user \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVotingSystem_a1c98a9e7da5c73802a9ed14abdea868d}\label{classVotingSystem_a1c98a9e7da5c73802a9ed14abdea868d} 
+\index{VotingSystem@{VotingSystem}!startVoting@{startVoting}}
+\index{startVoting@{startVoting}!VotingSystem@{VotingSystem}}
+\doxysubsubsection{\texorpdfstring{startVoting()}{startVoting()}}
+{\footnotesize\ttfamily void Voting\+System\+::start\+Voting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the voting process. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{VotingSystem_8h}{Voting\+System.\+h}}\item 
+src/\mbox{\hyperlink{VotingSystem_8cpp}{Voting\+System.\+cpp}}\end{DoxyCompactItemize}

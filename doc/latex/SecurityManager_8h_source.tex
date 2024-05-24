@@ -1,0 +1,77 @@
+\doxysection{Security\+Manager.\+h}
+\hypertarget{SecurityManager_8h_source}{}\label{SecurityManager_8h_source}\index{src/SecurityManager.h@{src/SecurityManager.h}}
+\mbox{\hyperlink{SecurityManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SECURITY\_MANAGER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SECURITY\_MANAGER\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cryptopp/osrng.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cryptopp/aes.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <cryptopp/hex.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cryptopp/modes.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cryptopp/filters.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cryptopp/base64.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cryptopp/files.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSecurityManager}{SecurityManager}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<SecurityManager>\ instance;\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::map<std::string,\ std::vector<unsigned\ char>>\ encryptionKeys;\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::map<std::string,\ std::string>\ certificates;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classSecurityManager}{SecurityManager}}()\ \{\}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classSecurityManager}{SecurityManager}}*\ \mbox{\hyperlink{classSecurityManager_ae4f8df7d31733824b2fa3bdaead17e1f}{getInstance}}()}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ std::unique\_ptr<SecurityManager>(\textcolor{keyword}{new}\ \mbox{\hyperlink{classSecurityManager}{SecurityManager}}());}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance.get();}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00060\ \ \ \ \ std::string\ \mbox{\hyperlink{classSecurityManager_aa32f32c3d95425c78e4741aa9996f72f}{encrypt}}(\textcolor{keyword}{const}\ std::string\&\ plaintext,\ \textcolor{keyword}{const}\ std::string\&\ keyName);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00071\ \ \ \ \ std::string\ \mbox{\hyperlink{classSecurityManager_a6a6a6c4a454d4b3a1d42e19dbb01a1f5}{decrypt}}(\textcolor{keyword}{const}\ std::string\&\ ciphertext,\ \textcolor{keyword}{const}\ std::string\&\ keyName);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSecurityManager_a98043bbd45e5c99ad5d9a594d4e8f659}{generateKeys}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSecurityManager_a380853d0bd3a3903015eab46eb8bb7e7}{addEncryptionKey}}(\textcolor{keyword}{const}\ std::string\&\ keyName,\ \textcolor{keyword}{const}\ std::vector<unsigned\ char>\&\ keyValue)}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (keyValue.size()\ !=\ CryptoPP::AES::DEFAULT\_KEYLENGTH)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Invalid\ key\ length:\ "{}}\ <<\ keyValue.size()\ <<\ std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Invalid\ key\ length"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ encryptionKeys[keyName]\ =\ keyValue;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSecurityManager_aa55a15a14b82dff9044dbf2d56fa6d23}{addCertificate}}(\textcolor{keyword}{const}\ std::string\&\ certName,\ \textcolor{keyword}{const}\ std::string\&\ certValue)}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ certificates[certName]\ =\ certValue;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \ \ \ \ std::vector<unsigned\ char>\ \mbox{\hyperlink{classSecurityManager_a8d870dbf0678aab3b2fe2b03e3872cbc}{getEncryptionKey}}(\textcolor{keyword}{const}\ std::string\&\ keyName)}
+\DoxyCodeLine{00115\ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ encryptionKeys.find(keyName);}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ encryptionKeys.end())}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ it-\/>second;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Encryption\ key\ not\ found:\ "{}}\ +\ keyName);}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00129\ \ \ \ \ std::string\ \mbox{\hyperlink{classSecurityManager_a908d4d42ca870a6f16c4305e53952d75}{getCertificate}}(\textcolor{keyword}{const}\ std::string\&\ certName)}
+\DoxyCodeLine{00130\ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ certificates[certName];}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

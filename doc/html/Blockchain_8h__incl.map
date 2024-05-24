@@ -1,0 +1,19 @@
+<map id="src/Blockchain.h" name="src/Blockchain.h">
+<area shape="rect" id="Node000001" title="Declaration of the Blockchain class." alt="" coords="260,5,388,31"/>
+<area shape="rect" id="Node000002" href="$Block_8h.html" title="Declaration of the Block class." alt="" coords="243,79,314,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,32,296,69,291,66,314,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="338,79,401,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="334,30,357,66,352,69,329,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,106,97,150,95,145,242,101"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="109,152,168,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="257,106,175,148,172,143,255,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="192,152,267,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="273,106,247,142,243,139,268,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="291,152,365,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="289,103,314,139,310,142,285,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="390,152,509,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="307,102,410,144,408,149,305,106"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="533,152,651,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="315,99,327,101,528,146,526,152,326,107,314,104"/>
+</map>

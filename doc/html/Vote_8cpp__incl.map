@@ -1,0 +1,13 @@
+<map id="src/Vote.cpp" name="src/Vote.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the Vote class." alt="" coords="129,5,231,31"/>
+<area shape="rect" id="Node000002" href="$Vote_8h.html" title="Declaration of the Vote class." alt="" coords="149,79,211,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,31,183,65,177,65,177,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,106,81,148,78,143,157,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="109,152,168,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="175,106,155,141,150,139,171,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="192,152,251,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="189,103,210,139,205,141,185,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="275,152,352,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="203,102,281,143,278,148,200,106"/>
+</map>

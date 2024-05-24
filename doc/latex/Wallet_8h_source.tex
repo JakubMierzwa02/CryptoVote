@@ -1,0 +1,47 @@
+\doxysection{Wallet.\+h}
+\hypertarget{Wallet_8h_source}{}\label{Wallet_8h_source}\index{src/Wallet.h@{src/Wallet.h}}
+\mbox{\hyperlink{Wallet_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ WALLET\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ WALLET\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Block_8h}{Block.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Blockchain_8h}{Blockchain.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VotingToken_8h}{VotingToken.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVotingToken}{VotingToken}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWallet}{Wallet}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ accountBalance;\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<std::string>\ transactionHistory;\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::unique\_ptr<VotingToken>\ votingToken;\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classWallet_ad9be9e49244b78db9099fcaeccd1af04}{Wallet}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWallet_a08ed7535c594e97a9c26323355d67f45}{generateWallet}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWallet_a9045bf2588e34c2592b13d34042e0222}{addTokens}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWallet_aae6a0aaa3d24353adb204376a78f4086}{spendTokens}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVotingToken}{VotingToken}}\&\ \mbox{\hyperlink{classWallet_a493d2fd27e5828165e016be3053f94d3}{getVotingToken}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWallet_aa72858290ab4fb35c357139ec1fcd9e3}{useVotingToken}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classWallet_ae70fc806cf13164bbe28e79c2ce0d181}{getBalance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{classWallet_a97fc8bcebca1dc70aba2bba947b5e745}{getTransactionHistory}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWallet_ab93aca099f2e72131becad62212cf8cd}{addVotingToken}}(std::unique\_ptr<VotingToken>\ token);}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

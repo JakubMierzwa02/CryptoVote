@@ -1,0 +1,16 @@
+<map id="src/SecurityManager.h" name="src/SecurityManager.h">
+<area shape="rect" id="Node000001" title="Declaration of the SecurityManager class." alt="" coords="91,5,258,31"/>
+<area shape="rect" id="Node000002" href="$SecurityManager_8cpp.html" title="Implementation of the SecurityManager class." alt="" coords="5,79,187,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,42,111,80,107,76,150,38"/>
+<area shape="rect" id="Node000003" href="$User_8h.html" title="Declaration of the User class." alt="" coords="211,79,298,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,38,243,76,240,80,196,42"/>
+<area shape="rect" id="Node000004" href="$User_8cpp.html" title="Implementation of the User class." alt="" coords="56,152,157,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="220,112,132,154,130,149,218,107"/>
+<area shape="rect" id="Node000005" href="$VotingSystem_8h.html" title="Declaration of the VotingSystem class." alt="" coords="181,152,328,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="257,118,257,152,252,152,252,118"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title=" " alt="" coords="313,225,418,251"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="293,109,319,127,342,150,353,169,360,190,367,225,362,226,355,191,348,172,338,154,316,131,290,113"/>
+<area shape="rect" id="Node000006" href="$VotingSystem_8cpp.html" title="Implementation of the VotingSystem class." alt="" coords="125,225,288,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="241,190,217,227,212,224,237,187"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="285,183,349,223,346,227,283,187"/>
+</map>
