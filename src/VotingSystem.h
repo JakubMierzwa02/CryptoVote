@@ -23,7 +23,7 @@ public:
     VotingSystem();
     void startVoting();
     void endVoting();
-    void countVotes();
+    std::string countVotes();
     const std::vector<std::shared_ptr<User>>& getUsers() const;
 
     void registerUser(int userID, const std::string& personalData);

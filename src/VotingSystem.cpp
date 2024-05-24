@@ -31,8 +31,9 @@ void VotingSystem::endVoting()
     }
 }
 
-void VotingSystem::countVotes()
+std::string VotingSystem::countVotes()
 {
+    std::ostringstream result;
     if (!votingStatus)
     {
         std::unordered_map<std::string, int> voteCount;
@@ -54,16 +55,18 @@ void VotingSystem::countVotes()
             
         }
 
-        std::cout << "Vote count: " << std::endl;
+        result << "Vote count: " << std::endl;
         for (const auto& entry : voteCount)
         {
-            std::cout << entry.first << ": " << entry.second << std::endl;
+            result << entry.first << ": " << entry.second << std::endl;
         }
     }
     else
     {
         std::cout << "Voting is still in progress. Cannot count votes yet." << std::endl;
     }
+    
+    return result.str();
 }
 
 const std::vector<std::shared_ptr<User>>& VotingSystem::getUsers() const

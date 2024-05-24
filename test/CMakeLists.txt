@@ -20,11 +20,13 @@ add_executable(CryptoVoteTest
     # security_manager_test.cpp
     ../src/SecurityManager.cpp
     ../src/VotingSystem.cpp
-    voting_system_test.cpp
+    # voting_system_test.cpp
+    voting_system_integration_test.cpp
 )
 
 target_link_libraries(CryptoVoteTest
     gtest_main
+    gmock_main
     cryptopp
 )
 

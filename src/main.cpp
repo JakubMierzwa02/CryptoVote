@@ -40,7 +40,7 @@ int main()
 
     votingSystem.endVoting();
 
-    votingSystem.countVotes();
+    std::cout << votingSystem.countVotes();
 
     Blockchain& blockchain = Blockchain::getInstance();
     bool isChainValid = blockchain.verifyChain();
