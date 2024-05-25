@@ -26,6 +26,8 @@ add_executable(CryptoVote
     src/SecurityManager.cpp
     src/VotingSystem.h
     src/VotingSystem.cpp
+    src/CLI.h
+    src/CLI.cpp
 )
 
 target_link_libraries(CryptoVote cryptopp)
